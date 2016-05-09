@@ -63,6 +63,30 @@ body {
 	margin-top: 15px;
 	margin-bottom: 20px;
 	display: block;
+	position: relative;
+}
+
+.ContactDIV h3 {
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.ContactDIV h4 {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.ContactDIV h5 {
+	display: block;
+	margin-top: 14px;
+}
+
+.ContactDIV .closeBtn {
+	vertical-align: top;
+	display: inline-block;
+	position: absolute;
+	left: 434px;
 }
 
 .errorMSG {

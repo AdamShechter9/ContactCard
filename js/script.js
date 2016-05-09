@@ -30,6 +30,8 @@ function person () {
 	}
 }
 
+// Add User to person object
+
 var addUser = function () {
 	var person2 = new person();
 	person2.first = $('#firstnameIn').val();
@@ -38,21 +40,27 @@ var addUser = function () {
 	return person2;
 }
 
+// Reset form input
+
 var clearForm = function () {
 	$('#firstnameIn').val("");
 	$('#lastnameIn').val("");
 	$('#descriptionIn').val("");
 }
 
+// Create HTML for card and add to page.
+
 var addPerson2Page = function (index3) {
 	var name1 = contacts[index3].myname();
-	var html1 = '<div class="ContactDIV" alt-data="' + index3 + '"><h3>' + name1 + "</h3><h5>Click For description!</h5></div>";
+	var html1 = '<div class="ContactDIV" alt-data="' + index3 + '">';
+	html1 += '<button class="closeBtn">x</button>';
+	html1 += '<h3>' + name1 + "</h3><h5>Click For description!</h5></div>";
 	$('.DisplaySide').append(html1);
 	clearForm();
 }
 
 // Future Implementation
-var toggleCard = function (index5) {}
+var sortArray = function () {}
 
 
 
@@ -104,15 +112,21 @@ $(document).ready(function () {
 		console.log("clicked " + index4 + "    showFlag" + showFlag1);
 		if (showFlag1 === 0) {
 			var description1 = contacts[index4].description;
-			var html2 = "<h4>" + description1 + "</h4><h5>Click Again!</h5>";
+			var html2 = '<button class="closeBtn">x</button>' + "<h4>" + description1 + "</h4><h5>Click to go back.</h5>";
 			$(this).html(html2);
 			contacts[index4].showFlag = 1;
 		}
 		else if (showFlag1 === 1) {
 			var name1 = contacts[index4].myname();
-			var html1 = "<h3>" + name1 + "</h3><h5>Click For description!</h5>";
+			var html1 = '<button class="closeBtn">x</button>' + "<h3>" + name1 + "</h3><h5>Click For description!</h5>";
 			$(this).html(html1);
 			contacts[index4].showFlag = 0;
 		}
 	})
+
+	$(document).on("click", ".closeBtn", function(event) {
+		event.stopPropagation();
+		$(this).parent('.ContactDIV').hide();
+	})
+
 });
