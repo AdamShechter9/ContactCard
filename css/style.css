@@ -1,4 +1,72 @@
-html, body {
+html {
   margin: 0;
   padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+	width: 1000px;
+}
+
+.UserSide {
+	width: 30%;
+	border: 1px solid gray;
+	display: inline-block;
+	padding: 10px 25px 45px;
+	text-align: left;
+	background-color: lightgray;
+	box-shadow: 3px 8px 6px gray;
+	height: 350px;
+}
+
+.UserSide #descriptionIn {
+	display: inline-block;
+	height: 150px;
+	width: 270px;
+}
+
+.DisplaySide {
+	width: 58%;
+	border: 1px solid black;
+	display: inline-block;
+	padding: 10px 25px 45px;
+	vertical-align: top;
+	text-align: center;
+	box-shadow: 3px 6px 6px gray;
+}
+
+.ButtonBars {
+	border: 1px solid purple;
+	background-color: lightgray;
+	box-shadow: 3px 6px 6px gray;
+	padding: 10px 5px 15px;
+	text-align: center;
+	width: 60%;
+	margin: auto;
+	margin-bottom: 30px;
+	/*display: none;*/
+}
+
+.ContactDIV {
+	border: 2px solid silver;
+	background-color: lightgray;
+	box-shadow: 3px 6px 6px gray;
+	padding: 10px 5px 15px;
+	text-align: center;
+	width: 80%;
+	height: 80px;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.errorMSG {
+	display: inline-block;
+	color: red;
+	display: none;
 }

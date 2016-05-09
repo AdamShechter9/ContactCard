@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>Bootstrap assignment</title>
+  	<title>Contact Card Assignment</title>
   	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   	<meta name="description" content="my description">
   	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Adam Shechter">
@@ -14,6 +12,36 @@
   </head>
   
   <body>
-
+    <div class="container">
+      <div class="UserSide">
+        <form>
+          <p>
+            <label>First Name:</label>
+            <input type="text" id="firstnameIn" placeholder="First Name">
+          </p>
+          <p>
+            <label>Last Name:</label>
+            <input type="text" id="lastnameIn" placeholder="Last Name">
+          </p>
+          <p>
+            <label>Description:</label>
+            <textarea id="descriptionIn" placeholder="Description"></textarea>
+          </p>
+          <button class="btn" id="AddBtn">Add User</button>
+          <button class="btn" id="ClrBtn">Clear</button>
+        </form>
+        <div class="errorMSG">
+          <p>Empty fields!</p>
+        </div>
+      </div>
+      <div class="DisplaySide">
+        <div class="ButtonBars">
+          <button class="btn" id="DltBtn" disabled="">Delete User</button>
+          <button class="btn" id="SrtDBBtn" disabled="">Sort User DB</button>
+          <button class="Btn" id="RstDBBtn">Reset User DB</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/script.js"></script>
   </body>
 </html>
